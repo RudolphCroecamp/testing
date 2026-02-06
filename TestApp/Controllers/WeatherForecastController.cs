@@ -12,7 +12,7 @@ namespace TestApp.Controllers
         ];
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> GetWeatherForecastGet()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -22,5 +22,12 @@ namespace TestApp.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("/get")]
+        public ActionResult Get()
+        {
+           return Ok("Success");
+        }
+
     }
 }
