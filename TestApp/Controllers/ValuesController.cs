@@ -15,6 +15,12 @@ namespace TestApp.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        [HttpGet("custom")]
+        public IEnumerable<string> GetCustom()
+        {
+            return new string[] { "this is custom value1", "this is custom value2" };
+        }
+
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
         public string Get(int id)
