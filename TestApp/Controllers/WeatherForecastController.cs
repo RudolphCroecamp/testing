@@ -23,7 +23,7 @@ namespace TestApp.Controllers
             .ToArray();
         }
 
-        [HttpGet("/get")]
+        [HttpGet("get")]
         public ActionResult Get()
         {
            return Ok("Success");
